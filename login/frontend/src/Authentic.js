@@ -684,7 +684,7 @@ export default function Authentic() {
             ...(formData.role === "organization" && !isAdmin && { officeName: formData.officeName })
           },
         {
-          baseURL: "http://localhost:5000",
+          baseURL:  process.env.REACT_APP_API_URL || "http://localhost:5000",
           headers: { "Content-Type": "application/json" }
         }
       );
@@ -725,7 +725,7 @@ export default function Authentic() {
     if (!emailError && email) {
       try {
         await axios.post('/auth/forgot-password', { email, role: isAdmin ? "admin" : "user" }, {
-          baseURL: "http://localhost:5000",
+          baseURL:  process.env.REACT_APP_API_URL || "http://localhost:5000",
           headers: { "Content-Type": "application/json" }
         });
         alert("Password reset link sent to your email!");

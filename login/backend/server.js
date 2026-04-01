@@ -22,12 +22,12 @@ app.use("/auth", authRoutes);            // login, register
 app.use("/", documentRoutes);            // document APIs
 
 // React production setup
-if (process.env.NODE_ENV === "production") {
+/*if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "../client/build")));
     app.get("/{*path}", (req, res) =>
         res.sendFile(path.join(__dirname, "../client/build/index.html"))
     );
-}
+}*/
 
 // Fallback route
 app.get("/api", (req, res) => res.send("API is running"));

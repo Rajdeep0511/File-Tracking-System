@@ -74,10 +74,8 @@ The application will be available at `http://localhost:5000`
 
 ## 🌐 Deployment
 
-The application is deployed on Heroku. You can access it at:
-[📍 File Tracking System](https://yourapp.herokuapp.com)
-
-*(Replace with your actual deployed link)*
+The application is deployed on Vercel . You can access it:
+file-tracking-system-five.vercel.app
 
 ## 🤝 Contribution
 
